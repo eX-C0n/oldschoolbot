@@ -17,6 +17,7 @@ export namespace UserSettings {
 	export const Pets = T<BankType>('pets');
 	export const CollectionLogBank = T<BankType>('collectionLogBank');
 	export const MonsterScores = T<BankType>('monsterScores');
+	export const MinigameScores = T<BankType>('minigameScores');
 	export const ClueScores = T<BankType>('clueScores');
 	export const LastDailyTimestamp = T<number>('lastDailyTimestamp');
 	export const BitField = T<readonly number[]>('bitfield');

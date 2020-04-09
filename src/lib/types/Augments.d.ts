@@ -6,8 +6,8 @@ import { Limit } from 'p-limit';
 import { Image } from 'canvas';
 
 import { CustomGet } from '../settings/types/UserSettings';
-import { Bank } from '.';
-import { SkillsEnum } from '../skilling/types';
+import { Bank, SkillsEnum } from '.';
+import { GearSetup, GearStats } from '../gear/types';
 
 declare module 'klasa' {
 	interface KlasaClient {
@@ -105,6 +105,13 @@ declare module 'discord.js' {
 		 * Returns this users Collection Log bank.
 		 */
 		collectionLog: Bank;
+		getMinigameKC(minigameID: number): number;
+		getCombatGear(): { meleeGear: GearSetup; rangeGear: GearSetup; mageGear: GearSetup };
+		getCombatGearStats(): {
+			meleeGearStats: GearStats;
+			rangeGearStats: GearStats;
+			mageGearStats: GearStats;
+		};
 		sanitizedName: string;
 		badges: string;
 		/**
