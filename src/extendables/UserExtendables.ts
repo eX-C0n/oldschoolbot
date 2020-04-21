@@ -448,6 +448,9 @@ export default class extends Extendable {
 					Emoji.Runecraft
 				} Runecraft level is ${this.skillLevel(SkillsEnum.Runecraft)}`;
 			}
+			case Activity.Raids: {
+				return `${this.minionName} is currently doing a raid. Approximately ${formattedDuration} remaining.`;
+			}
 		}
 	}
 
